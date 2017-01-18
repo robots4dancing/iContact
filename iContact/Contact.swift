@@ -16,10 +16,10 @@ class Contact: NSObject {
     var email           :String!
     
     var fullNameByFirst :String! {
-        return "\(firstName), \(lastName)"
+        return "\(firstName!), \(lastName!)"
     }
     var fullNameByLast  :String! {
-        return "\(lastName), \(firstName)"
+        return "\(lastName!), \(firstName!)"
     }
     
     init(firstName: String, lastName: String, phoneNum: String, email: String) {
