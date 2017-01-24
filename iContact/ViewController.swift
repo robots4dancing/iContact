@@ -91,7 +91,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         print("Row \(indexPath.row) \(currentContact.fullNameByLast!)")
         
     }
-    
+    //https://www.youtube.com/watch?v=ju-JF1GbTHU and https://www.andrewcbancroft.com/2015/07/16/uitableview-swipe-to-delete-workflow-in-swift/ used to inform
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             contactArray.remove(at: indexPath.row)

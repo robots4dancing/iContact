@@ -61,13 +61,14 @@ class DetailViewController: UIViewController {
     
     //MARK: - Validation Methods
     
+    //
     func isValidPhoneNum(phoneNum: String) -> Bool {
         let phoneNumRegEx = "^(\\([0-9]{3}\\)|[0-9]{3}-)[0-9]{3}-[0-9]{4}$"
-        
+        // examples: (555)123-4567, 555-123-4567
         let phoneNumTest = NSPredicate(format: "SELF MATCHES %@", phoneNumRegEx)
         return phoneNumTest.evaluate(with: phoneNum)
     }
-    
+        //example: SOME.thing_123456%7+8-9.com, 123someThin.g_456-7+8%9.US
     func isValidEmail(email: String) -> Bool {
         let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}"
         
